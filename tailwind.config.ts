@@ -57,6 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Valoria brand colors
+        valoria: {
+          primary: "hsl(var(--valoria-primary))",
+          secondary: "hsl(var(--valoria-secondary))",
+          amber: "hsl(var(--valoria-amber))",
+          surface: "hsl(var(--valoria-surface))",
+          shell: "hsl(var(--valoria-shell))",
+        },
+      },
+      fontFamily: {
+        sans: ['Poppins', 'Cairo', 'Tajawal', 'system-ui', 'sans-serif'],
+        display: ['Playfair Display', 'Poppins', 'Cairo', 'serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -65,25 +77,35 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "slide-in-right": {
+          from: { transform: "translateX(100%)", opacity: "0" },
+          to: { transform: "translateX(0)", opacity: "1" },
+        },
+        "slide-in-left": {
+          from: { transform: "translateX(-100%)", opacity: "0" },
+          to: { transform: "translateX(0)", opacity: "1" },
+        },
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "slide-in-right": "slide-in-right 0.3s ease-out",
+        "slide-in-left": "slide-in-left 0.3s ease-out",
+        shimmer: "shimmer 2s infinite",
+      },
+      boxShadow: {
+        'valoria': '0 10px 28px hsl(345 56% 34% / 0.18)',
+        'valoria-lg': '0 20px 40px hsl(345 56% 34% / 0.25)',
       },
     },
   },

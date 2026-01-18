@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/valoria/Header";
+import HeroSlider from "@/components/valoria/HeroSlider";
+import CategorySection from "@/components/valoria/CategorySection";
+import ProductsSection from "@/components/valoria/ProductsSection";
+import PromoSlider from "@/components/valoria/PromoSlider";
+import Footer from "@/components/valoria/Footer";
+import MobileNav from "@/components/valoria/MobileNav";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background" dir="rtl">
+      <Header />
+      <main>
+        <HeroSlider />
+        <CategorySection />
+        <ProductsSection />
+        <PromoSlider />
+      </main>
+      <Footer />
+      <MobileNav />
+      {/* Spacer for mobile nav */}
+      <div className="h-24 md:hidden" />
     </div>
   );
 };
